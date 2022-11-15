@@ -59,7 +59,8 @@ def main(**kwargs):
         metavar="filter",
         type=str,
         nargs="+",
-        help="Add custom jinja filter",
+        help="Add custom jinja filter. Can be specified multiple times",
+        action="extend",
     )
     parser.add_argument(
         "files", metavar="file", type=str, nargs="+", help="the files to lint"
